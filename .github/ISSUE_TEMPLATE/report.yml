@@ -1,0 +1,35 @@
+name: 不具合・翻訳修正・改善提案 / Report
+description: 表示・翻訳の問題や改善案を報告する / Report a problem or suggestion
+body:
+  - type: markdown
+    attributes:
+      value: "投稿と添付ファイルは公開されます。個人情報・認証情報・非公開資料を含めないでください。Reports and attachments are public."
+  - type: dropdown
+    id: category
+    attributes:
+      label: 種別 / Category
+      options:
+        - 表示・操作 / Display or interaction
+        - 翻訳・用語 / Translation or terminology
+        - 図表・数式 / Figure, table or equation
+        - 改善提案 / Improvement suggestion
+        - その他 / Other
+    validations:
+      required: true
+  - type: input
+    id: edition
+    attributes:
+      label: 版名 / Edition
+      placeholder: CyBOK_v1.2.0-j-rc1
+  - type: textarea
+    id: location
+    attributes:
+      label: 対象箇所 / Location
+      description: URL・管理ID・図表番号など、分かる範囲で / URL, passage ID or figure/table number, if known
+  - type: textarea
+    id: description
+    attributes:
+      label: 問題・改善案 / Problem or suggestion
+      description: 実際の表示、期待する表示、再現手順など / Actual result, expected result and steps to reproduce
+    validations:
+      required: true
